@@ -1,15 +1,35 @@
 body {
-  font-family: 'Segoe UI', sans-serif;
-  background: #fdf6f0;
+  font-family: 'Orbitron', sans-serif;
+  background: radial-gradient(circle at top, #1a1a2e, #16213e);
+  color: #f0f0f0;
   margin: 0;
   padding: 0;
   text-align: center;
+  position: relative;
+  overflow-x: hidden;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: url('https://i.imgur.com/3ZQ3Z9L.png') repeat;
+  opacity: 0.1;
+  z-index: -1;
+  animation: drift 60s linear infinite;
+}
+
+@keyframes drift {
+  from { background-position: 0 0; }
+  to { background-position: 1000px 1000px; }
 }
 
 header {
-  background-color: #ff6f61;
+  background: linear-gradient(to right, #ff6f61, #ff9a8b);
   color: white;
   padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
 }
 
 .nav-buttons {
@@ -32,22 +52,23 @@ header {
 }
 
 #calendar {
-  max-width: 700px;
+  max-width: 800px;
   margin: auto;
   padding: 1rem;
 }
 
 .month {
-  background: white;
+  background: rgba(255, 255, 255, 0.05);
   border: 2px solid #ff6f61;
   border-radius: 8px;
   padding: 1rem;
+  backdrop-filter: blur(10px);
 }
 
 .month h2 {
   margin: 0.5rem 0;
   font-size: 1.5rem;
-  color: #1e3d59;
+  color: #ffcc00;
 }
 
 .weekdays {
@@ -55,6 +76,7 @@ header {
   grid-template-columns: repeat(7, 1fr);
   font-weight: bold;
   margin-bottom: 5px;
+  color: #ffcc00;
 }
 
 .days {
@@ -65,6 +87,7 @@ header {
 
 .day {
   background: #fff;
+  color: #000;
   border: 1px solid #ccc;
   border-radius: 4px;
   min-height: 80px;
@@ -78,12 +101,19 @@ header {
 }
 
 .game {
-  background: #1e3d59;
-  color: white;
   font-size: 0.7rem;
   margin-top: 4px;
   border-radius: 3px;
   padding: 2px;
+  color: white;
+}
+
+.game.bucks {
+  background: #2e8b57;
+}
+
+.game.ohiostate {
+  background: #bb0000;
 }
 
 .modal {
@@ -105,6 +135,7 @@ header {
   margin: auto;
   box-shadow: 0 4px 10px rgba(0,0,0,0.2);
   text-align: left;
+  color: #000;
 }
 
 .modal-content button {
