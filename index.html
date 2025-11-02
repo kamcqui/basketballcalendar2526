@@ -9,7 +9,11 @@
 <body>
   <header>
     <h1>🏀 Maxwell & Zackary's Game Calendar</h1>
-    <p>Showing games for the current month</p>
+    <p>Click a day to view game details</p>
+    <div class="nav-buttons">
+      <button onclick="changeMonth(-1)">⏮️ Previous</button>
+      <button onclick="changeMonth(1)">Next ⏭️</button>
+    </div>
   </header>
 
   <main id="calendar"></main>
