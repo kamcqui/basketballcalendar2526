@@ -1,3 +1,4 @@
+/* General layout */
 body {
   font-family: 'Segoe UI', sans-serif;
   background: #fdf6f0;
@@ -6,12 +7,24 @@ body {
   text-align: center;
 }
 
+/* Header styling */
 header {
   background-color: #ff6f61;
   color: white;
   padding: 1rem;
 }
 
+header h1 {
+  margin: 0;
+  font-size: 2rem;
+}
+
+header p {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+/* Dropdown filter */
 select {
   margin-top: 0.5rem;
   padding: 0.5rem;
@@ -20,6 +33,7 @@ select {
   border: none;
 }
 
+/* Calendar grid */
 #calendar {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(120px, 1fr));
@@ -29,6 +43,7 @@ select {
   margin: auto;
 }
 
+/* Individual day box */
 .day {
   background: white;
   border: 2px solid #ff6f61;
@@ -37,8 +52,15 @@ select {
   min-height: 100px;
   position: relative;
   box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+  transition: transform 0.2s ease;
 }
 
+.day:hover {
+  transform: scale(1.03);
+}
+
+/* Game entry */
 .game {
   background: #1e3d59;
   color: white;
@@ -46,8 +68,68 @@ select {
   margin-top: 5px;
   border-radius: 4px;
   font-size: 0.9rem;
+  text-align: left;
 }
 
 .game::before {
   content: "🏀 ";
 }
+
+/* Modal overlay */
+#modal {
+  display: none;
+  position: fixed;
+  top: 0; left: 0;
+  width: 100%; height: 100%;
+  background: rgba(0,0,0,0.6);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content box */
+.modal-content {
+  background: white;
+  padding: 1rem;
+  border-radius: 8px;
+  max-width: 400px;
+  margin: auto;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.2);
+  text-align: left;
+}
+
+/* Modal form inputs */
+.modal-content form {
+  margin-top: 1rem;
+}
+
+.modal-content input,
+.modal-content select {
+  margin: 0.5rem 0;
+  padding: 0.5rem;
+  width: 100%;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Buttons */
+button {
+  margin-top: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 1rem;
+  background-color: #ff6f61;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #e85c50;
+}
+
+/* Delete button inside game list */
+.modal-content li button {
+  background-color: #ccc;
+  color
