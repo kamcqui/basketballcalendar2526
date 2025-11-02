@@ -1,51 +1,18 @@
 body {
   font-family: 'Orbitron', sans-serif;
-  background: radial-gradient(circle at top, #1a1a2e, #16213e);
-  color: #f0f0f0;
   margin: 0;
   padding: 0;
   text-align: center;
-  position: relative;
-  overflow-x: hidden;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  top: 0; left: 0;
-  width: 100%; height: 100%;
-  background: url('https://cdn.pixabay.com/photo/2017/08/30/07/52/stars-2695569_1280.jpg') repeat;
+  background: url('https://copilot.microsoft.com/th/id/BCO.b08125b9-3934-445e-b49c-62d2a374db9a.png') no-repeat center center fixed;
   background-size: cover;
-  opacity: 0.15;
-  z-index: -1;
-  animation: drift 120s linear infinite;
-}
-
-@keyframes drift {
-  from { background-position: 0 0; }
-  to { background-position: 1000px 1000px; }
+  color: #f0f0f0;
 }
 
 header {
-  background: linear-gradient(to right, #ff6f61, #ff9a8b);
-  color: white;
+  background: rgba(0, 0, 0, 0.7);
   padding: 1rem;
-  box-shadow: 0 4px 10px rgba(0,0,0,0.3);
-}
-
-.logo {
-  width: 200px;
-  max-width: 90%;
-  margin: 0 auto 10px;
-  display: block;
-  animation: pulse 2s infinite;
-  filter: drop-shadow(0 0 10px #ffcc00);
-}
-
-@keyframes pulse {
-  0% { transform: scale(1); opacity: 1; }
-  50% { transform: scale(1.1); opacity: 0.8; }
-  100% { transform: scale(1); opacity: 1; }
+  color: #ffcc00;
+  text-shadow: 0 0 5px #ffcc00;
 }
 
 .nav-buttons {
@@ -56,7 +23,7 @@ header {
   margin: 0 0.5rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
-  background-color: #1e3d59;
+  background-color: #ff6f61;
   color: white;
   border: none;
   border-radius: 5px;
@@ -64,27 +31,25 @@ header {
 }
 
 .nav-buttons button:hover {
-  background-color: #34495e;
+  background-color: #ff9a8b;
 }
 
 #calendar {
   max-width: 800px;
   margin: auto;
   padding: 1rem;
+  background: rgba(0, 0, 0, 0.6);
+  border-radius: 10px;
 }
 
 .month {
-  background: rgba(255, 255, 255, 0.05);
-  border: 2px solid #ff6f61;
-  border-radius: 8px;
   padding: 1rem;
-  backdrop-filter: blur(10px);
 }
 
 .month h2 {
-  margin: 0.5rem 0;
   font-size: 1.5rem;
   color: #ffcc00;
+  margin-bottom: 1rem;
 }
 
 .weekdays {
@@ -102,9 +67,8 @@ header {
 }
 
 .day {
-  background: #fff;
+  background: rgba(255, 255, 255, 0.9);
   color: #000;
-  border: 1px solid #ccc;
   border-radius: 4px;
   min-height: 80px;
   font-size: 0.8rem;
@@ -137,7 +101,7 @@ header {
   position: fixed;
   top: 0; left: 0;
   width: 100%; height: 100%;
-  background: rgba(0,0,0,0.6);
+  background: rgba(0,0,0,0.8);
   justify-content: center;
   align-items: center;
   z-index: 1000;
@@ -168,7 +132,7 @@ header {
 .countdown-widget {
   margin: 2rem auto;
   padding: 1rem;
-  background: rgba(255,255,255,0.1);
+  background: rgba(0,0,0,0.7);
   border: 2px solid #ffcc00;
   border-radius: 10px;
   max-width: 400px;
@@ -180,12 +144,4 @@ header {
   font-size: 2rem;
   font-family: 'Orbitron', sans-serif;
   margin-top: 0.5rem;
-}
-
-.orbit {
-  position: fixed;
-  top: 10px;
-  right: 10px;
-  z-index: 0;
-  opacity: 0.3;
 }
