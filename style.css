@@ -34,9 +34,12 @@ header {
 }
 
 .logo {
-  max-width: 120px;
-  margin-top: 10px;
+  width: 200px;
+  max-width: 90%;
+  margin: 0 auto 10px;
+  display: block;
   animation: pulse 2s infinite;
+  filter: drop-shadow(0 0 10px #ffcc00);
 }
 
 @keyframes pulse {
