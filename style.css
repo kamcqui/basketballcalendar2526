@@ -14,31 +14,51 @@ header {
 
 #calendar {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
-  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1rem;
   padding: 1rem;
-  max-width: 1000px;
-  margin: auto;
+}
+
+.month {
+  background: white;
+  border: 2px solid #ff6f61;
+  border-radius: 8px;
+  padding: 0.5rem;
+}
+
+.month h2 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  color: #1e3d59;
+}
+
+.days {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
 }
 
 .day {
-  background: white;
-  border: 2px solid #ff6f61;
-  padding: 0.5rem;
-  border-radius: 8px;
-  min-height: 120px;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  background: #fff;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  min-height: 60px;
+  font-size: 0.8rem;
+  padding: 2px;
   cursor: pointer;
+}
+
+.day:hover {
+  background: #ffe5e0;
 }
 
 .game {
   background: #1e3d59;
   color: white;
-  padding: 0.3rem;
-  margin-top: 5px;
-  border-radius: 4px;
-  font-size: 0.9rem;
-  text-align: left;
+  font-size: 0.7rem;
+  margin-top: 2px;
+  border-radius: 3px;
+  padding: 2px;
 }
 
 #modal {
@@ -84,8 +104,4 @@ button {
   border: none;
   border-radius: 5px;
   cursor: pointer;
-}
-
-button:hover {
-  background-color: #e85c50;
 }
