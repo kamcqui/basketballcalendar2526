@@ -13,9 +13,8 @@ header {
 }
 
 #calendar {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-  gap: 1rem;
+  max-width: 700px;
+  margin: auto;
   padding: 1rem;
 }
 
@@ -23,13 +22,20 @@ header {
   background: white;
   border: 2px solid #ff6f61;
   border-radius: 8px;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 
 .month h2 {
   margin: 0.5rem 0;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   color: #1e3d59;
+}
+
+.weekdays {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  font-weight: bold;
+  margin-bottom: 5px;
 }
 
 .days {
@@ -42,9 +48,9 @@ header {
   background: #fff;
   border: 1px solid #ccc;
   border-radius: 4px;
-  min-height: 60px;
+  min-height: 80px;
   font-size: 0.8rem;
-  padding: 2px;
+  padding: 5px;
   cursor: pointer;
 }
 
@@ -56,12 +62,12 @@ header {
   background: #1e3d59;
   color: white;
   font-size: 0.7rem;
-  margin-top: 2px;
+  margin-top: 4px;
   border-radius: 3px;
   padding: 2px;
 }
 
-#modal {
+.modal {
   display: none;
   position: fixed;
   top: 0; left: 0;
@@ -82,21 +88,8 @@ header {
   text-align: left;
 }
 
-.modal-content form {
+.modal-content button {
   margin-top: 1rem;
-}
-
-.modal-content input {
-  margin: 0.5rem 0;
-  padding: 0.5rem;
-  width: 100%;
-  font-size: 1rem;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-}
-
-button {
-  margin-top: 0.5rem;
   padding: 0.5rem 1rem;
   font-size: 1rem;
   background-color: #ff6f61;
