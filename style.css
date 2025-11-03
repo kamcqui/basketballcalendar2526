@@ -4,7 +4,7 @@ body {
   padding: 0;
   text-align: center;
   background: radial-gradient(circle at top, #1a1a2e, #16213e);
-  background-image: url('https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?auto=format&fit=crop&w=1950&q=80'); /* Cosmic basketball court */
+  background-image: url('https://images.unsplash.com/photo-1557682224-5b8590cd9ec5?auto=format&fit=crop&w=1950&q=80');
   background-size: cover;
   background-attachment: fixed;
   background-position: center;
@@ -12,7 +12,7 @@ body {
   overflow-x: hidden;
 }
 
-/* Space Jam intro animation */
+/* Intro animation */
 .intro {
   position: fixed;
   top: 0; left: 0;
@@ -126,6 +126,7 @@ header {
   border-radius: 3px;
   padding: 2px;
   color: white;
+  background: #444;
 }
 
 .game.bucks {
@@ -134,6 +135,11 @@ header {
 
 .game.ohiostate {
   background: #bb0000;
+}
+
+.game.playoff {
+  background: linear-gradient(45deg, #ff00cc, #3333ff);
+  box-shadow: 0 0 5px #00ffff;
 }
 
 .modal {
@@ -169,7 +175,7 @@ header {
   cursor: pointer;
 }
 
-/* Countdown and scoreboard */
+/* Upcoming Games widget */
 .countdown-widget {
   margin: 2rem auto;
   padding: 1rem;
@@ -190,13 +196,6 @@ header {
   box-shadow: 0 0 20px #ffcc00;
 }
 
-#timer {
-  font-size: 2rem;
-  font-family: 'Orbitron', sans-serif;
-  margin-top: 0.5rem;
-}
-
-/* Glowing hoop */
 .hoop {
   width: 100px;
   height: 100px;
@@ -204,19 +203,4 @@ header {
   border-radius: 50%;
   margin: 1rem auto;
   box-shadow: 0 0 20px #ffcc00;
-}
-
-/* Animated SVG basketballs */
-.orbit-container {
-  position: fixed;
-  bottom: 10px;
-  left: 10px;
-  z-index: 0;
-  opacity: 0.3;
-}
-
-.orbit-ball {
-  width: 100px;
-  height: 100px;
-  margin: 10px;
 }
