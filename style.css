@@ -3,16 +3,28 @@ body {
   margin: 0;
   padding: 0;
   text-align: center;
-  background: url('https://copilot.microsoft.com/th/id/BCO.b08125b9-3934-445e-b49c-62d2a374db9a.png') no-repeat center center fixed;
+  background: radial-gradient(circle at top, #1a1a2e, #16213e);
+  background-image: url('https://cdn.pixabay.com/photo/2017/08/30/07/52/stars-2695569_1280.jpg');
   background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
   color: #f0f0f0;
 }
 
 header {
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.8);
   padding: 1rem;
   color: #ffcc00;
   text-shadow: 0 0 5px #ffcc00;
+  border-bottom: 2px solid #ffcc00;
+}
+
+.banner {
+  width: 100%;
+  max-height: 300px;
+  object-fit: cover;
+  border-bottom: 2px solid #ffcc00;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.5);
 }
 
 .nav-buttons {
