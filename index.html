@@ -8,8 +8,12 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div class="intro">
+    <h1 class="intro-text">🏀 Welcome to the Galactic Game Zone 🪐</h1>
+  </div>
+
   <header>
-    <h1>🏀 Maxwell & Zackary's Galactic Game Calendar</h1>
+    <h1>Maxwell & Zackary's Galactic Game Calendar</h1>
     <p>Click a day to view game details</p>
     <div class="nav-buttons">
       <button onclick="changeMonth(-1)">⏮️ Previous</button>
@@ -20,20 +24,30 @@
   <main id="calendar"></main>
 
   <div id="countdown" class="countdown-widget">
-    <h2>⏳ GAME DAY COUNTDOWN</h2>
-    <p id="nextGameInfo">Loading next game…</p>
-    <div id="timer">--:--:--</div>
+    <div class="scoreboard">
+      <h2>⏳ GAME DAY COUNTDOWN</h2>
+      <p id="nextGameInfo">Loading next game…</p>
+      <div id="timer">--:--:--</div>
+    </div>
+    <div class="hoop"></div>
   </div>
 
   <div id="modal" class="modal"></div>
 
   <audio id="swoosh" src="https://freesound.org/data/previews/341/341695_3248244-lq.mp3"></audio>
 
-  <div class="orbit">
-    <svg width="100" height="100" viewBox="0 0 100 100">
+  <!-- Animated SVG basketballs -->
+  <div class="orbit-container">
+    <svg class="orbit-ball" viewBox="0 0 100 100">
       <circle cx="50" cy="50" r="40" stroke="#ffcc00" stroke-width="2" fill="none" />
       <circle cx="50" cy="20" r="5" fill="#ff6f61">
-        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="10s" repeatCount="indefinite" />
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="8s" repeatCount="indefinite" />
+      </circle>
+    </svg>
+    <svg class="orbit-ball" viewBox="0 0 100 100">
+      <circle cx="50" cy="50" r="30" stroke="#00ffff" stroke-width="2" fill="none" />
+      <circle cx="50" cy="20" r="5" fill="#00ffff">
+        <animateTransform attributeName="transform" type="rotate" from="0 50 50" to="360 50 50" dur="12s" repeatCount="indefinite" />
       </circle>
     </svg>
   </div>
