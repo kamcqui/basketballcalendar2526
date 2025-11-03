@@ -8,12 +8,14 @@
   <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@500&display=swap" rel="stylesheet">
 </head>
 <body>
+  <!-- Intro animation -->
   <div class="intro">
-    <h1 class="intro-text">🏀 Go Sports 🪐</h1>
+    <h1 class="intro-text">🏀 Welcome to the Galactic Game Zone 🪐</h1>
   </div>
 
+  <!-- Header -->
   <header>
-    <h1>Maxwell & Zackary's Basketball Calendar</h1>
+    <h1>Maxwell & Zackary's Galactic Game Calendar</h1>
     <p>Click a day to view game details</p>
     <div class="nav-buttons">
       <button onclick="changeMonth(-1)">⏮️ Previous</button>
@@ -21,19 +23,22 @@
     </div>
   </header>
 
+  <!-- Calendar container -->
   <main id="calendar"></main>
 
+  <!-- Upcoming Games widget -->
   <div id="countdown" class="countdown-widget">
     <div class="scoreboard">
-      <h2>⏳ GAME DAY COUNTDOWN</h2>
+      <h2>🚀 UPCOMING GAMES</h2>
       <p id="nextGameInfo">Loading next game…</p>
-      <div id="timer">--:--:--</div>
     </div>
     <div class="hoop"></div>
   </div>
 
+  <!-- Modal for game details -->
   <div id="modal" class="modal"></div>
 
+  <!-- Sound effect -->
   <audio id="swoosh" src="https://freesound.org/data/previews/341/341695_3248244-lq.mp3"></audio>
 
   <!-- Animated SVG basketballs -->
@@ -52,6 +57,13 @@
     </svg>
   </div>
 
+  <!-- Script -->
   <script src="script.js"></script>
+  <script>
+    window.onload = () => {
+      generateCalendar(currentMonth, currentYear);
+      getNextGame();
+    };
+  </script>
 </body>
 </html>
