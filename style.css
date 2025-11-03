@@ -214,9 +214,11 @@ header {
   opacity: 0.3;
   display: flex;
   gap: 20px;
+  pointer-events: none;
 }
 
 .orbit-ball {
   width: 100px;
   height: 100px;
+  overflow: hidden;
 }
