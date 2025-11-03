@@ -204,21 +204,3 @@ header {
   margin: 1rem auto;
   box-shadow: 0 0 20px #ffcc00;
 }
-
-/* Animated SVG basketballs */
-.orbit-container {
-  position: fixed;
-  bottom: 20px;
-  left: 20px;
-  z-index: 0;
-  opacity: 0.3;
-  display: flex;
-  gap: 20px;
-  pointer-events: none;
-}
-
-.orbit-ball {
-  width: 100px;
-  height: 100px;
-  overflow: hidden;
-}
